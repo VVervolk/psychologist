@@ -1,0 +1,19 @@
+{
+  "name": "psychologist",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "posthtml": "^0.16.6",
+    "posthtml-include": "^2.0.1",
+    "sass": "^1.77.5",
+    "vite": "^5.2.0",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-posthtml": "^0.0.3"
+  }
+}
