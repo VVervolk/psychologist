@@ -1,0 +1,26 @@
+.main-button {
+  width: 100%;
+  border-radius: 24px;
+  padding: 12px 24px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 130%;
+
+  background-color: var(--active-color);
+  color: var(--main-background);
+  border: none;
+
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--active-color);
+    background-color: var(--main-background);
+    outline: solid 2px var(--active-color);
+  }
+}

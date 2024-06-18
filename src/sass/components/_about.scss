@@ -1,0 +1,25 @@
+.about {
+  min-width: 375px;
+  max-width: 375px;
+  padding-top: 42px;
+}
+
+.about__title {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.about__photo {
+  min-width: 335px;
+  margin-bottom: 16px;
+}
+
+.about__text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+}
