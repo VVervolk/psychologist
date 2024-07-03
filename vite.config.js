@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import { createHtmlPlugin } from "vite-plugin-html";
 import posthtml from "posthtml";
 import include from "posthtml-include";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 // Функция для использования posthtml-include
 const posthtmlPlugin = () => {
   return {
@@ -22,16 +21,5 @@ export default defineConfig({
   server: {
     open: true, // Автоматически открывать браузер при запуске сервера
   },
-  plugins: [
-    createHtmlPlugin(),
-    posthtmlPlugin(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: "images",
-          dest: ".",
-        },
-      ],
-    }),
-  ],
+  plugins: [createHtmlPlugin(), posthtmlPlugin()],
 });
