@@ -1,25 +1,33 @@
 import { defineConfig } from "vite";
-import { createHtmlPlugin } from "vite-plugin-html";
-import posthtml from "posthtml";
-import include from "posthtml-include";
-// Функция для использования posthtml-include
-const posthtmlPlugin = () => {
+import { sync as globSync } from "glob";
+import injectHTML from "vite-plugin-html-inject";
+import FullReload from "vite-plugin-full-reload";
+
+export default defineConfig(({ command }) => {
   return {
-    name: "vite-plugin-posthtml-include",
-    transformIndexHtml: async (html) => {
-      const result = await posthtml([include({ root: "./src" })]).process(html);
-      return result.html;
+    define: {
+      [command === "serve" ? "global" : "_global"]: {},
+    },
+    root: "src",
+    build: {
+      sourcemap: true,
+
+      rollupOptions: {
+        input: globSync("./src/*.html"),
+        output: {
+          manualChunks(id) {
+            if (id.includes("node_modules")) {
+              return "vendor";
+            }
+          },
+          entryFileNames: "commonHelpers.js",
+        },
+      },
+      outDir: "../dist",
+    },
+    plugins: [injectHTML(), FullReload(["./src/**/**.html"])],
+    optimizeDeps: {
+      include: ["vite-plugin-html-inject", "vite-plugin-full-reload"],
     },
   };
-};
-
-export default defineConfig({
-  root: "src",
-  build: {
-    outDir: "../dist", // Каталог сборки будет создан на уровень выше src
-  },
-  server: {
-    open: true, // Автоматически открывать браузер при запуске сервера
-  },
-  plugins: [createHtmlPlugin(), posthtmlPlugin()],
 });
