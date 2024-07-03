@@ -1,13 +1,4 @@
-body {
-  margin: 0;
-  color: var(--main-text-color);
-  background-color: var(--main-background);
-  font-family: "Montserrat", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+@import "normalize.css";
 
 h1,
 h2,
