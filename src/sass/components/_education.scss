@@ -1,0 +1,39 @@
+.education {
+  position: relative;
+  padding-block: 40px;
+}
+
+.swiper {
+  height: 436px;
+}
+
+.swiper-slide {
+  background: #da3535;
+  //   height: calc((100% - 16px - 26px) / 2) !important;
+  height: 197px !important;
+  //   width: 129px !important;
+
+  //   &:nth-child(1) {
+  //     width: 276px !important;
+  //   }
+  //   &:nth-child(2) {
+  //     width: 276px !important;
+  //   }
+  //   &:nth-child(5) {
+  //     width: 276px !important;
+  //   }
+  //   &:nth-child(6) {
+  //     width: 276px !important;
+  //   }
+  //   &:nth-child(-n + 4) {
+  //     width: 276px !important;
+  //   }
+}
+
+.swiper-pagination {
+  height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #9cb99c !important;
+}

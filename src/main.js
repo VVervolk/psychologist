@@ -1,3 +1,5 @@
+import "./js/swiper.js";
+
 document.addEventListener("DOMContentLoaded", (event) => {
   // Находим кнопку по её ID
   const openButton = document.querySelector(".header__button-menu");
