@@ -12,6 +12,16 @@ const swiper = new Swiper(".mySwiper", {
   grid: {
     rows: 2,
   },
+  zoom: {
+    maxRatio: 5,
+    minRatio: 1,
+  },
+  on: {
+    slideChangeTransitionEnd: function () {
+      console.log("clicked!");
+      this.zoom.in();
+    },
+  },
   spaceBetween: 16,
   pagination: {
     el: ".swiper-pagination",
