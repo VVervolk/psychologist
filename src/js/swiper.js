@@ -5,7 +5,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css/bundle";
 
 // init Swiper:
-const swiper = new Swiper(".mySwiper", {
+const educationSwiper = new Swiper(".educationSwiper", {
   slidesPerView: 1.20209,
 
   grid: {
@@ -14,10 +14,21 @@ const swiper = new Swiper(".mySwiper", {
 
   spaceBetween: 16,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination_education",
     clickable: true,
   },
   modules: [Pagination],
 });
 
-export default swiper;
+const reviewsSwiper = new Swiper(".reviewsSwiper", {
+  slidesPerView: 1.3,
+
+  spaceBetween: 12,
+  pagination: {
+    el: ".swiper-pagination-reviews",
+    clickable: true,
+  },
+  modules: [Pagination],
+});
+
+export { educationSwiper, reviewsSwiper };

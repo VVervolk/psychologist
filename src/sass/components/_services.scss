@@ -1,0 +1,38 @@
+.services {
+  padding-block: 40px;
+}
+
+.services__services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.services-list__service {
+  padding: 24px;
+  border-radius: 12px;
+
+  background-color: var(--second-background);
+
+  .service__text:last-of-type {
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+}
+
+.service__title {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.service__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.service__text_bold {
+  font-weight: 500;
+}
