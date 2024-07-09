@@ -25,3 +25,20 @@
     outline: solid 2px var(--active-color);
   }
 }
+
+.button-show-more {
+  position: absolute;
+  right: 24px;
+  bottom: 52px;
+
+  padding: 0;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 130%;
+  text-decoration: underline;
+
+  color: #9cb99c;
+  background-color: inherit;
+  border: none;
+}

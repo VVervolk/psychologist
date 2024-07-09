@@ -1,26 +1,33 @@
 .reviews {
+  position: relative;
   padding-block: 40px;
+  // height: 418px;
 }
+
 // .swiper_review {
-//   height: 285px;
+//   min-height: 285px;
 // }
 
 .slide-review {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
   border: 2px solid var(--main-text-color);
   border-radius: 12px;
   padding: 24px;
-  //   height: 259px !important;
+  // width: 335px !important;
+  // height: 259px !important;
 }
 
 .slide-review__name {
+  margin-bottom: 12px;
   font-weight: 600;
   font-size: 16px;
   line-height: 130%;
-  margin-bottom: 12px;
 }
 
 .slide-review__review {
-  margin-bottom: 54px;
+  margin-bottom: 36px;
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
@@ -31,4 +38,9 @@
   font-size: 12px;
   line-height: 130%;
   color: #868686;
+}
+
+.swiper-pagination-reviews {
+  margin-top: 16px;
+  position: relative !important;
 }

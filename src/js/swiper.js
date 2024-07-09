@@ -21,7 +21,7 @@ const educationSwiper = new Swiper(".educationSwiper", {
 });
 
 const reviewsSwiper = new Swiper(".reviewsSwiper", {
-  slidesPerView: 1.3,
+  slidesPerView: 1,
 
   spaceBetween: 12,
   pagination: {

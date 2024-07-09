@@ -1,4 +1,4 @@
-import "./js/textCutter.js";
+import "./js/slidesCreator.js";
 import "./js/swiper.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
