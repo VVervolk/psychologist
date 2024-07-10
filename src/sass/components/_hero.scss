@@ -1,12 +1,37 @@
 .hero {
-  padding-block: 40px;
+  padding-block: 80px;
 }
 
 .images-box__item-paper {
   display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+    order: 3;
+  }
 }
 .images-box__item-text {
   display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+    border-radius: 12px;
+    padding: 12px 28px;
+    width: 248px;
+    height: 95px;
+
+    font-style: italic;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 130%;
+    opacity: 0.5;
+    text-transform: uppercase;
+
+    order: 4;
+
+    background-color: var(--second-background);
+    color: var(--active-color);
+  }
 }
 
 .hero__images-box {
@@ -17,6 +42,12 @@
   flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 24px;
+
+  @media screen and (min-width: 1280px) {
+    width: 518px;
+    height: 544px;
+    gap: 24px;
+  }
 }
 
 .images-box__item-circle {
@@ -33,7 +64,21 @@
   & img {
     position: absolute;
 
+    width: 95px;
+    height: 86px;
+
     animation: rotate 10s linear infinite;
+  }
+
+  @media screen and (min-width: 1280px) {
+    order: 1;
+    width: 246px;
+    height: 189px;
+
+    & img {
+      width: 74%;
+      height: 74%;
+    }
   }
 }
 
@@ -55,11 +100,20 @@
   gap: 8px;
   margin-bottom: 40px;
 
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 32px;
+  }
+
   & h2 {
     font-size: 29px;
     font-style: inherit;
     font-weight: inherit;
     line-height: inherit;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
   }
 
   h1 {
@@ -67,6 +121,11 @@
     font-style: inherit;
     font-weight: inherit;
     line-height: inherit;
+
+    @media screen and (min-width: 1280px) {
+      width: 350px;
+      font-size: 22px;
+    }
   }
 
   & p {
@@ -74,6 +133,10 @@
     font-style: inherit;
     font-weight: inherit;
     line-height: inherit;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -84,4 +147,24 @@
 .hero__socials_center {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .hero__flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero__text-and-buttons-wrapper {
+    order: -1;
+  }
+
+  .images-box__item-photo {
+    order: 2;
+  }
+
+  .images-box__item-dino {
+    order: 5;
+  }
 }

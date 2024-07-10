@@ -4,22 +4,8 @@
   }
 }
 
-@mixin tablet {
-  @media screen and (min-width: 1024px) {
-    @content;
-  }
-}
-
 @mixin desktop {
-  @media screen and (min-width: 1440px) {
-    @content;
-  }
-}
-
-@mixin retina {
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  @media screen and (min-width: 1280px) {
     @content;
   }
 }

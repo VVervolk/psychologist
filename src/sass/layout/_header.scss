@@ -1,9 +1,14 @@
 .header {
   padding: 30px 0;
 }
+
 .header__button-menu {
   background-color: inherit;
   border: none;
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 }
 
 .button-menu__icon {
@@ -11,4 +16,19 @@
   height: 32px;
   fill: black;
   stroke: black;
+}
+
+.header__nav {
+  display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+  }
 }
