@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as mixins;
+
 body {
   margin: 0;
   color: var(--main-text-color);
@@ -13,6 +15,12 @@ html {
   font-weight: 500;
   font-size: 24px;
   margin-bottom: 24px;
+
+  @include mixins.desktop {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
 }
 
 img {

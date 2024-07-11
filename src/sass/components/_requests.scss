@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as mixins;
+
 .requests {
   min-width: 375px;
   padding-block: 40px;
@@ -15,7 +17,16 @@
   gap: 80px;
 }
 
-.requests-box__request-block {
+@include mixins.desktop {
+  .requests-box__request-block {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    &:nth-last-child(-n + 2) li:nth-last-child(1) {
+      flex-grow: 0;
+    }
+  }
 }
 
 .request-block__title {
@@ -30,16 +41,27 @@
   font-size: 17px;
   line-height: 130%;
   text-align: center;
+
+  @include mixins.desktop {
+    margin-bottom: 0;
+    min-width: 212px;
+    min-height: 52px;
+    padding-inline: 0;
+    font-size: 20px;
+  }
 }
 
 .request-block__request-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+
+  @include mixins.desktop {
+    gap: 12px;
+  }
 }
 
 .request-list__request {
-  //   border: 1px solid var(--main-text-color);
   outline: var(--main-text-color) solid 1px;
   border-radius: 24px;
   padding: 12px 10px;
@@ -52,4 +74,9 @@
   font-size: 14px;
   line-height: 130%;
   text-align: center;
+
+  @include mixins.desktop {
+    // font-weight: 500;
+    font-size: 16px;
+  }
 }

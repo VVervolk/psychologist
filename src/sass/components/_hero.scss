@@ -1,11 +1,17 @@
+@use "../abstracts/mixins" as mixins;
+
 .hero {
-  padding-block: 80px;
+  padding-block: 40px;
+
+  @include mixins.desktop {
+    padding-block: 80px;
+  }
 }
 
 .images-box__item-paper {
   display: none;
 
-  @media screen and (min-width: 1280px) {
+  @include mixins.desktop {
     display: block;
     order: 3;
   }
@@ -13,7 +19,7 @@
 .images-box__item-text {
   display: none;
 
-  @media screen and (min-width: 1280px) {
+  @include mixins.desktop {
     display: block;
     border-radius: 12px;
     padding: 12px 28px;
@@ -43,7 +49,7 @@
   gap: 16px;
   margin-bottom: 24px;
 
-  @media screen and (min-width: 1280px) {
+  @include mixins.desktop {
     width: 518px;
     height: 544px;
     gap: 24px;
@@ -70,9 +76,9 @@
     animation: rotate 10s linear infinite;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include mixins.desktop {
     order: 1;
-    width: 246px;
+    width: 247px;
     height: 189px;
 
     & img {
@@ -100,7 +106,7 @@
   gap: 8px;
   margin-bottom: 40px;
 
-  @media screen and (min-width: 1280px) {
+  @include mixins.desktop {
     margin-bottom: 32px;
   }
 
@@ -110,7 +116,7 @@
     font-weight: inherit;
     line-height: inherit;
 
-    @media screen and (min-width: 1280px) {
+    @include mixins.desktop {
       font-size: 50px;
       margin-bottom: 20px;
     }
@@ -122,7 +128,7 @@
     font-weight: inherit;
     line-height: inherit;
 
-    @media screen and (min-width: 1280px) {
+    @include mixins.desktop {
       width: 350px;
       font-size: 22px;
     }
@@ -134,7 +140,7 @@
     font-weight: inherit;
     line-height: inherit;
 
-    @media screen and (min-width: 1280px) {
+    @include mixins.desktop {
       font-size: 16px;
     }
   }
@@ -149,7 +155,7 @@
   justify-content: center;
 }
 
-@media screen and (min-width: 1280px) {
+@include mixins.desktop {
   .hero__flex-box {
     display: flex;
     justify-content: space-between;
@@ -162,6 +168,8 @@
 
   .images-box__item-photo {
     order: 2;
+    width: 247px;
+    height: 331px;
   }
 
   .images-box__item-dino {

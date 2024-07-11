@@ -1,10 +1,20 @@
+@use "../abstracts/mixins" as mixins;
+
 .about {
   padding-block: 40px;
+  @include mixins.desktop {
+    padding-block: 80px;
+  }
 }
 
 .about__photo {
-  min-width: 335px;
   margin-bottom: 16px;
+
+  @include mixins.desktop {
+    margin-bottom: 0;
+    margin-right: 24px;
+    order: 0;
+  }
 }
 
 .about__text-box {
@@ -14,8 +24,32 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
+
+  @include mixins.desktop {
+    width: 585px;
+    order: 2;
+    gap: 12px;
+    font-weight: 500;
+  }
 }
 
 .italic-font {
   font-style: italic;
+  font-weight: 400;
+}
+
+@include mixins.desktop {
+  .about__flex-box {
+    height: 662px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about__title {
+    order: 1;
+    margin-bottom: 12px;
+    text-align: left;
+  }
 }

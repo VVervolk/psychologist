@@ -1,13 +1,29 @@
+@use "../abstracts/mixins" as mixins;
+
 .education {
   padding-block: 40px;
+
+  @include mixins.desktop {
+    padding-bottom: 80px;
+  }
 }
 
 .swiper_education {
   height: 436px;
+
+  @include mixins.desktop {
+    margin: 0 !important;
+    width: 680px;
+    height: 530px;
+  }
 }
 
 .swiper-slide_education {
   height: 197px !important;
+
+  @include mixins.desktop {
+    height: 232px !important;
+  }
 }
 
 .swiper-pagination_education {
@@ -16,4 +32,24 @@
 
 .swiper-pagination-bullet-active {
   background-color: #9cb99c !important;
+}
+
+.education__photo {
+  display: none;
+
+  @include mixins.desktop {
+    display: block;
+  }
+}
+
+@include mixins.desktop {
+  .education__title {
+  }
+  .education__flex-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .thumb {
+    width: 452px;
+  }
 }

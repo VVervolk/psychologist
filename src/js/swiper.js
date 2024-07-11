@@ -18,6 +18,13 @@ const educationSwiper = new Swiper(".educationSwiper", {
     clickable: true,
   },
   modules: [Pagination],
+
+  breakpoints: {
+    1280: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+  },
 });
 
 const reviewsSwiper = new Swiper(".reviewsSwiper", {

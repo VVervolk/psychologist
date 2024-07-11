@@ -1,11 +1,17 @@
 <section id="about" class="about">
-  <div class="container">
-    <h2 class="title">Про мене</h2>
+  <div class="container about__flex-box">
+    <h2 class="title about__title">Про мене</h2>
     <img
       class="about__photo"
-      srcset="images/about/about.jpg 1x, images/about/about@2x.jpg 2x"
-      src="images/about/about.jpg"
-      alt="Фото психолога"
+      srcset="
+        images/about/mobile/about.jpg              335w,
+        images/about/desktop/about_519x662.jpg     519w,
+        images/about/mobile/about@2x.jpg           670w,
+        images/about/desktop/about_519x662@2x.jpg 1038w
+      "
+      sizes="(min-width: 1280px) 519px, 335px"
+      src="images/about/mobile/about.jpg"
+      alt=""
     />
     <div class="about__text-box">
       <p>
