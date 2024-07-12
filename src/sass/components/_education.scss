@@ -4,7 +4,7 @@
   padding-block: 40px;
 
   @include mixins.desktop {
-    padding-bottom: 80px;
+    padding-block: 80px;
   }
 }
 
@@ -42,10 +42,48 @@
   }
 }
 
+.swiper__buttons {
+  display: none;
+  @include mixins.desktop {
+    display: flex;
+    gap: 24px;
+    position: absolute;
+    left: 304px;
+    bottom: 0px;
+
+    z-index: 10;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+
+      fill: var(--active-color);
+
+      &:active,
+      &:hover,
+      &:focus {
+        fill: var(--main-text-color);
+      }
+    }
+
+    .swiper-button-disabled {
+      fill: #868686;
+
+      &:active,
+      &:hover,
+      &:focus {
+        fill: #868686;
+      }
+    }
+  }
+}
+
 @include mixins.desktop {
   .education__title {
   }
   .education__flex-box {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
   }

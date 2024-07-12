@@ -1,6 +1,6 @@
 // core version + navigation, pagination modules:
 import Swiper from "swiper/bundle";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 // import Swiper and modules styles
 import "swiper/css/bundle";
 
@@ -13,14 +13,21 @@ const educationSwiper = new Swiper(".educationSwiper", {
   },
 
   spaceBetween: 16,
-  pagination: {
-    el: ".swiper-pagination_education",
-    clickable: true,
-  },
-  modules: [Pagination],
+
+  modules: [Pagination, Navigation],
 
   breakpoints: {
+    0: {
+      pagination: {
+        el: ".swiper-pagination_education",
+        clickable: true,
+      },
+    },
     1280: {
+      navigation: {
+        nextEl: ".button-next",
+        prevEl: ".button-back",
+      },
       slidesPerView: 2,
       spaceBetween: 24,
     },

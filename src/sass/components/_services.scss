@@ -1,11 +1,23 @@
+@use "../abstracts/mixins" as mixins;
+
 .services {
   padding-block: 40px;
+
+  @include mixins.desktop {
+    padding-block: 80px;
+  }
 }
 
 .services__services-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @include mixins.desktop {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 22px;
+  }
 }
 
 .services-list__service {
@@ -16,7 +28,14 @@
 
   .service__text:last-of-type {
     margin-top: 8px;
-    margin-bottom: 24px;
+  }
+
+  @include mixins.desktop {
+    width: calc((100% - 22px * 3) / 4);
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -35,4 +54,12 @@
 
 .service__text_bold {
   font-weight: 500;
+}
+
+.services__flex-box {
+  margin-bottom: 24px;
+
+  @include mixins.desktop {
+    margin-bottom: 0;
+  }
 }
