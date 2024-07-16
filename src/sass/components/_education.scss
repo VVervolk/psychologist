@@ -57,6 +57,8 @@
       width: 24px;
       height: 24px;
 
+      cursor: pointer;
+
       fill: var(--active-color);
 
       &:active,
@@ -79,15 +81,13 @@
 }
 
 @include mixins.desktop {
-  .education__title {
-  }
   .education__flex-box {
     position: relative;
 
     display: flex;
     justify-content: space-between;
   }
-  .thumb {
+  .education__thumb {
     width: 452px;
   }
 }

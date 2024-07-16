@@ -1,12 +1,23 @@
+@use "../abstracts/mixins" as mixins;
+
 .contacts {
   padding-block: 40px;
+
+  @include mixins.desktop {
+    padding-bottom: 80px;
+  }
 }
 
 .contacts__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 32px;
+
+  @include mixins.desktop {
+    align-content: center;
+    height: 550px;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
 }
 
 .contacts__quote {
@@ -14,21 +25,93 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
+  margin-bottom: 12px;
+
+  @include mixins.desktop {
+    order: 3;
+    width: 331px;
+    font-size: 18px;
+    font-style: normal;
+  }
 }
 
-.contacts__subtitle {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 130%;
+.contacts__first-photo {
+  border-radius: 12px;
+  margin-bottom: 12px;
+
+  @include mixins.desktop {
+    order: 0;
+    width: 446px;
+    height: 300px;
+    margin-right: 24px;
+  }
 }
 
-.contacts__contact-box {
+.contacts__contacts-box {
   display: flex;
+  flex-direction: column;
   gap: 12px;
-  align-items: center;
+  margin-bottom: 32px;
+
+  @include mixins.desktop {
+    order: 1;
+    margin-bottom: 12px;
+  }
+
+  .contacts-box__subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+
+    @include mixins.desktop {
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 150%;
+    }
+  }
+
+  .contacts-box__contact-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+
+    .contact-item__icon {
+      min-width: 24px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .contacts__socials {
+    justify-content: flex-start;
+
+    @include mixins.desktop {
+      & svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
 }
 
-.contact-box__icon {
-  width: 24px;
-  height: 24px;
+.contacts__second-photo {
+  display: none;
+
+  @include mixins.desktop {
+    border-radius: 12px;
+
+    display: block;
+    order: 4;
+  }
+}
+
+@include mixins.desktop {
+  .contacts__button {
+    order: 2;
+    width: 446px;
+  }
 }

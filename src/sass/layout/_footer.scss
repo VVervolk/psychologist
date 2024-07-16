@@ -1,9 +1,14 @@
+@use "../abstracts/mixins" as mixins;
+
 .footer {
-  position: relative;
   min-width: 375px;
 
   padding-block: 40px;
   background-color: var(--second-background);
+}
+
+.footer__pos {
+  position: relative;
 }
 
 .footer__nav {
@@ -15,6 +20,16 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
+
+  @include mixins.desktop {
+    gap: 40px;
+    margin-bottom: 28px;
+    flex-direction: row;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 16px;
+  }
 }
 
 .footer__copyright {
@@ -22,4 +37,13 @@
   font-size: 10px;
   line-height: 130%;
   text-align: center;
+}
+
+.footer__button-up {
+  top: 0;
+  right: 20px;
+
+  @include mixins.desktop {
+    right: 60px;
+  }
 }

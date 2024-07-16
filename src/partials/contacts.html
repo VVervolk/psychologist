@@ -6,68 +6,90 @@
         Якщо у Вас виникли питання, пов'язані з психологічним станом. Я допоможу
         розібратись в причинах та промалювати шляхи для усунення наслідків.
       </p>
-      <img
-        srcset="
-          images/contacts/mobile/contacts.jpg    1x,
-          images/contacts/mobile/contacts@2x.jpg 2x
-        "
-        src="images/contacts/mobile/contacts.jpg"
-        alt=""
-      />
-      <p class="contacts__subtitle">
-        Зустрічі проходять у режимі онлайн та офлайн.
-      </p>
-      <div class="contacts__contact-box">
-        <svg class="contact-box__icon">
-          <use href="images/sprite.svg#map-pin"></use>
-        </svg>
-        <p class="contacts__contact">
-          Живі зустрічі у місті Києві та в Крюківщині
+      <div class="contacts__first-photo">
+        <img
+          srcset="
+            images/contacts/mobile/contacts.jpg     335w,
+            images/contacts/desktop/contacts@2x.jpg 446w,
+            images/contacts/mobile/contacts@2x.jpg  670w,
+            images/contacts/desktop/contacts@2x.jpg 892w
+          "
+          sizes="(min-width: 1280px) 446px, 335px"
+          src="images/contacts/mobile/contacts.jpg"
+          alt="Психолог, молода дівчина в леопардовій сорочці, працює з терапевтичними картками за скляним столом"
+        />
+      </div>
+
+      <div class="contacts__contacts-box">
+        <p class="contacts-box__subtitle">
+          Зустрічі проходять у режимі онлайн та офлайн.
         </p>
+        <div class="contacts-box__contact-item">
+          <svg class="contact-item__icon">
+            <use href="images/sprite.svg#map-pin"></use>
+          </svg>
+          <p>Живі зустрічі у місті Києві та в Крюківщині</p>
+        </div>
+        <div class="contacts-box__contact-item">
+          <svg class="contact-item__icon">
+            <use href="images/sprite.svg#call"></use>
+          </svg>
+          <a href="tel:+380931062951">+38 (093) 106-29-51</a>
+        </div>
+        <div class="contacts-box__contact-item">
+          <svg class="contact-item__icon">
+            <use href="images/sprite.svg#mail"></use>
+          </svg>
+          <a href="mailto:samoylovakristina19@gmail.com"
+            >samoylovakristina19@gmail.com</a
+          >
+        </div>
+        <ul class="socials contacts__socials">
+          <li>
+            <a href=""
+              ><svg class="socials__icon">
+                <use href="images/sprite.svg#telegram"></use></svg
+            ></a>
+          </li>
+          <li>
+            <a href=""
+              ><svg class="socials__icon">
+                <use href="images/sprite.svg#whatsapp"></use></svg
+            ></a>
+          </li>
+          <li>
+            <a href=""
+              ><svg class="socials__icon">
+                <use href="images/sprite.svg#instagram"></use></svg
+            ></a>
+          </li>
+          <li>
+            <a href=""
+              ><svg class="socials__icon">
+                <use href="images/sprite.svg#tik-tok"></use></svg
+            ></a>
+          </li>
+        </ul>
       </div>
-      <div class="contacts__contact-box">
-        <svg class="contact-box__icon">
-          <use href="images/sprite.svg#call"></use>
-        </svg>
-        <a href="tel:+380931062951" class="contacts__contact"
-          >+38 (093) 106-29-51</a
-        >
+
+      <a
+        target="_blank"
+        referrerpolicy="no-referrer"
+        class="main-button contacts__button"
+        href="https://t.me/smlv_kristina"
+        >Записатися на консультацію</a
+      >
+      <div class="contacts__second-photo">
+        <img
+          class="contacts__second-photo"
+          srcset="
+            images/contacts/desktop/contacts_2.jpg    1x,
+            images/contacts/desktop/contacts_2@2x.jpg 2x
+          "
+          src="images/contacts/mobile/contacts_2.jpg"
+          alt="Психолог, молода дівчина у білій вишитій сорочці, пише на жовтих стикерах на стіні"
+        />
       </div>
-      <div class="contacts__contact-box">
-        <svg class="contact-box__icon">
-          <use href="images/sprite.svg#mail"></use>
-        </svg>
-        <a href="mailto:samoylovakristina19@gmail.com" class="contacts__contact"
-          >samoylovakristina19@gmail.com</a
-        >
-      </div>
-      <ul class="socials">
-        <li>
-          <a href=""
-            ><svg class="socials__icon">
-              <use href="images/sprite.svg#telegram"></use></svg
-          ></a>
-        </li>
-        <li>
-          <a href=""
-            ><svg class="socials__icon">
-              <use href="images/sprite.svg#whatsapp"></use></svg
-          ></a>
-        </li>
-        <li>
-          <a href=""
-            ><svg class="socials__icon">
-              <use href="images/sprite.svg#instagram"></use></svg
-          ></a>
-        </li>
-        <li>
-          <a href=""
-            ><svg class="socials__icon">
-              <use href="images/sprite.svg#tik-tok"></use></svg
-          ></a>
-        </li>
-      </ul>
     </div>
-    <button class="main-button">Записатися на консультацію</button>
   </div>
 </section>
