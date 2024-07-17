@@ -150,11 +150,6 @@
   margin-bottom: 24px;
 }
 
-.hero__socials_center {
-  display: flex;
-  justify-content: center;
-}
-
 @include mixins.desktop {
   .hero__flex-box {
     display: flex;
