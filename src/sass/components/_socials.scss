@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as mixins;
+
 .socials {
   display: flex;
   justify-content: center;
@@ -7,4 +9,9 @@
 .socials__icon {
   width: 32px;
   height: 32px;
+
+  @include mixins.desktop {
+    width: 40px;
+    height: 40px;
+  }
 }

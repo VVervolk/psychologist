@@ -14,10 +14,13 @@ export default document.addEventListener("DOMContentLoaded", () => {
 
     let reviewToAdd = review;
 
-    if (review.length > 205) {
-      reviewToAdd = textCutter(review);
+    let buttonShowMore;
 
-      const buttonShowMore = document.createElement("button");
+    if (review.length > 205) {
+      const lengthToCut = window.innerWidth < 1280 ? 205 : 215;
+      reviewToAdd = textCutter(review, lengthToCut);
+
+      buttonShowMore = document.createElement("button");
       buttonShowMore.className = "button-show-more";
       buttonShowMore.textContent = "Показати більше";
       buttonShowMore.dataset.toggle = "hide";
@@ -33,8 +36,6 @@ export default document.addEventListener("DOMContentLoaded", () => {
           buttonShowMore.dataset.toggle = "hide";
         }
       });
-
-      slide.appendChild(buttonShowMore);
     }
 
     const reviewText = document.createElement("p");
@@ -47,6 +48,7 @@ export default document.addEventListener("DOMContentLoaded", () => {
 
     slide.appendChild(reviewName);
     slide.appendChild(reviewText);
+    buttonShowMore ? slide.appendChild(buttonShowMore) : undefined;
     slide.appendChild(reviewDate);
 
     swiperWrapper.appendChild(slide);
