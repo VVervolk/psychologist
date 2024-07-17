@@ -36,13 +36,25 @@ const educationSwiper = new Swiper(".educationSwiper", {
 
 const reviewsSwiper = new Swiper(".reviewsSwiper", {
   slidesPerView: 1,
-
   spaceBetween: 12,
-  pagination: {
-    el: ".swiper-pagination-reviews",
-    clickable: true,
+  breakpoints: {
+    0: {
+      pagination: {
+        el: ".swiper-pagination-reviews",
+        clickable: true,
+      },
+    },
+    1280: {
+      navigation: {
+        nextEl: ".button-next-reviews",
+        prevEl: ".button-back-reviews",
+      },
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
   },
-  modules: [Pagination],
+
+  modules: [Pagination, Navigation],
 });
 
 export { educationSwiper, reviewsSwiper };

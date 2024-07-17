@@ -1,12 +1,18 @@
+@use "../abstracts/mixins" as mixins;
+
 .reviews {
   position: relative;
-  padding-block: 40px;
+  padding-block: 80px;
 }
 
 .slide-review {
   border: 2px solid var(--main-text-color);
   border-radius: 12px;
   padding: 24px;
+
+  // @include mixins.desktop {
+  //   height: auto !important;
+  // }
 }
 
 .slide-review__name {
@@ -33,4 +39,10 @@
 .swiper-pagination-reviews {
   margin-top: 16px;
   position: relative !important;
+}
+
+.swiper__buttons_reviews {
+  position: relative;
+  left: 0;
+  justify-content: center;
 }
