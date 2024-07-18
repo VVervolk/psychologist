@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as mixins;
+
+.js-animationOpacity {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.js-animationOpacity.animate {
+  opacity: 1;
+}
+
+@include mixins.desktop {
+  .js-animationTransform {
+    z-index: 1;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+
+  .js-animationTransform:nth-child(2) {
+    transform: translateX(calc(-100% - 22px));
+  }
+  .js-animationTransform:nth-child(3) {
+    transform: translateX(calc(-200% - 44px));
+  }
+  .js-animationTransform:nth-child(4) {
+    transform: translateX(calc(-300% - 66px));
+  }
+
+  .js-animationTransform.animate {
+    transform: translateX(0);
+  }
+}

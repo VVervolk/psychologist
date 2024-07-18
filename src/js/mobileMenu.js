@@ -7,11 +7,14 @@ export default document.addEventListener("DOMContentLoaded", (event) => {
 
   openButton.addEventListener("click", () => {
     mobileMenu.classList.add("is-open");
+    document.body.classList.add("no-scroll");
   });
   closeButton.addEventListener("click", () => {
     mobileMenu.classList.remove("is-open");
+    document.body.classList.remove("no-scroll");
   });
   nav.addEventListener("click", () => {
     mobileMenu.classList.remove("is-open");
+    document.body.classList.remove("no-scroll");
   });
 });

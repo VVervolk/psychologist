@@ -21,6 +21,10 @@
   transform: translateX(0%);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .mobile-menu__close-icon {
   position: absolute;
   top: 30px;

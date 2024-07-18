@@ -6,13 +6,15 @@
 }
 
 .slide-review {
+  display: flex !important;
+  flex-direction: column;
+  min-height: 260px !important;
+
   border: 2px solid var(--main-text-color);
   border-radius: 12px;
   padding: 24px;
 
   @include mixins.desktop {
-    display: flex !important;
-    flex-direction: column;
     min-height: 300px !important;
   }
 }
@@ -29,7 +31,6 @@
 }
 
 .slide-review__review {
-  margin-bottom: 36px;
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
@@ -37,18 +38,18 @@
   @include mixins.desktop {
     font-weight: 500;
     font-size: 16px;
-    margin-bottom: 0;
   }
 }
 
 .slide-review__date {
+  margin-top: auto;
+
   font-weight: 400;
   font-size: 12px;
   line-height: 130%;
   color: #868686;
 
   @include mixins.desktop {
-    margin-top: auto;
     font-size: 14px;
   }
 }
