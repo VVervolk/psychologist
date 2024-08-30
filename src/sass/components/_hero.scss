@@ -161,13 +161,17 @@
     order: -1;
   }
 
-  .images-box__item-photo {
+  .images-box__item-dino {
+    order: 5;
+  }
+}
+
+.images-box__item-photo {
+  height: 240px;
+
+  @include mixins.desktop {
     order: 2;
     width: 247px;
     height: 331px;
-  }
-
-  .images-box__item-dino {
-    order: 5;
   }
 }
